@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:21 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/16 17:23:03 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/19 17:51:45 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,21 +50,30 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
-std::string Bureaucrat::getName() { return this->name; }//get name
+std::string Bureaucrat::getName() const { return this->name; }//get name
 
-int Bureaucrat::getGrade() { return this->grade; }//get grade
+int Bureaucrat::getGrade() const { return this->grade; }//get grade
 
-void incrementGrade()
+void Bureaucrat::incrementGrade()
 {
 	if (grade < 1)
-		throw Bureaucrat::GradeTooHighException;
+		throw Bureaucrat::GradeTooHighException();
 	grade--;
 }
 
-void decrementGrade()
+void Bureaucrat::decrementGrade()
 {
 	if (grade > 150)
-		throw Bureaucrat::GradeTooLowException;
+		throw Bureaucrat::GradeTooLowException();
 	grade++;
 }
 
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade too high!";
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade too low!";
+}
