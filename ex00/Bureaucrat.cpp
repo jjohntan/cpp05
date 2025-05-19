@@ -53,3 +53,18 @@ Bureaucrat::~Bureaucrat()
 std::string Bureaucrat::getName() { return this->name; }//get name
 
 int Bureaucrat::getGrade() { return this->grade; }//get grade
+
+void incrementGrade()
+{
+	if (grade < 1)
+		throw Bureaucrat::GradeTooHighException;
+	grade--;
+}
+
+void decrementGrade()
+{
+	if (grade > 150)
+		throw Bureaucrat::GradeTooLowException;
+	grade++;
+}
+
