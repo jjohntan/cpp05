@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:29 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/19 17:49:25 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 16:36:25 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ class Bureaucrat
 		void decrementGrade();
 		class GradeTooHighException: public std::exception
 		{
-			const char* what() const throw();
+			public:
+				const char* what() const throw();
 		};
 		class GradeTooLowException: public std::exception
 		{
-			const char* what() const throw();
+			public:
+				const char* what() const throw();
 		};
 };
 
