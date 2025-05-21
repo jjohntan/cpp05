@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 18:39:13 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 18:42:25 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,10 @@ const char *Form::GradeTooHighException::what() const throw()
 const char *Form::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
+}
+
+std::ostream &operator<<(std::ostream &os, const Form &obj)
+{
+	os << obj.getName() << obj.getIsSigned() << obj.getGradeToSign() << obj.getGradeToExecute();
+	return os;
 }
