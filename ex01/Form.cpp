@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    Form.cpp                                          :+:      :+:    :+:   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 16:11:06 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 17:03:43 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,3 +49,9 @@ Form::~Form()
 {
 	std::cout << "Form destructor called" << std::endl;
 }
+
+std::string Form::getName() { return name; }
+bool Form::getIsSigned() { return isSigned; }
+int Form::getGradeToSign() { return gradeToSign; }
+int Form::getGradeToExecute() { return gradeToExecute; }
+
