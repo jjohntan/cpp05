@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 18:25:58 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 18:39:13 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,14 @@ void Form::beSigned(Bureaucrat const&bureaucrat)
 		isSigned = true;
 	else
 		throw GradeTooLowException();
+}
+
+const char *Form::GradeTooHighException::what() const throw()
+{
+	return "Grade too high";
+}
+
+const char *Form::GradeTooLowException::what() const throw()
+{
+	return "Grade too low";
 }
