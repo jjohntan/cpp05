@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 18:42:25 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 18:59:39 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ bool Form::getIsSigned() const { return isSigned; }
 int Form::getGradeToSign() const { return gradeToSign; }
 int Form::getGradeToExecute() const { return gradeToExecute; }
 
-void Form::beSigned(Bureaucrat const&bureaucrat)
+void Form::beSigned(Bureaucrat const &bureaucrat)
 {
-	if (bureaucrat.getGrade() >= gradeToSign)
+	if (bureaucrat.getGrade() <= gradeToSign)
 		isSigned = true;
 	else
 		throw GradeTooLowException();
