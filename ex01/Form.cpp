@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 17:03:43 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 18:25:58 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,15 @@ Form::~Form()
 	std::cout << "Form destructor called" << std::endl;
 }
 
-std::string Form::getName() { return name; }
-bool Form::getIsSigned() { return isSigned; }
-int Form::getGradeToSign() { return gradeToSign; }
-int Form::getGradeToExecute() { return gradeToExecute; }
+std::string Form::getName() const { return name; }
+bool Form::getIsSigned() const { return isSigned; }
+int Form::getGradeToSign() const { return gradeToSign; }
+int Form::getGradeToExecute() const { return gradeToExecute; }
 
+void Form::beSigned(Bureaucrat const&bureaucrat)
+{
+	if (bureaucrat.getGrade() >= gradeToSign)
+		isSigned = true;
+	else
+		throw GradeTooLowException();
+}

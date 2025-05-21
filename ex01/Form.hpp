@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:47 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/20 18:59:27 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/21 18:23:50 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ class Form
 		Form(const Form &other);
 		Form &operator=(const Form &other);
 		~Form();
-		std::string getName();
-		bool getIsSigned();
-		int getGradeToSign();
-		int getGradeToExecute();
-		void beSigned(Bureaucrat);
+		std::string getName() const;
+		bool getIsSigned() const;
+		int getGradeToSign() const;
+		int getGradeToExecute() const;
+		void beSigned(Bureaucrat const&);
 		class GradeTooHighException: public std::exception
 		{
 			public:

@@ -2,7 +2,7 @@ NAME = a.out
 
 SRCS = main.cpp \
 	 Bureaucrat.cpp \
-	 Forum.cpp
+	 Form.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
