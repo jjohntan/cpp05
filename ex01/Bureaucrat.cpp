@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:21 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 19:27:25 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/22 14:41:15 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ void Bureaucrat::signForm(Form &form)
 {
 	try
 	{
-		form.beSigned();
+		form.beSigned(*this);
 	}
 	catch (std::exception & e)
 	{
-	
+		std::cout << e.what() << std::endl;
 	}
 }
 
