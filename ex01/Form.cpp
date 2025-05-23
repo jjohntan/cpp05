@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/22 14:36:12 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/23 16:09:09 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ Form::~Form()
 	std::cout << "Form destructor called" << std::endl;
 }
 
+//getter
 std::string Form::getName() const { return name; }
 bool Form::getIsSigned() const { return isSigned; }
 int Form::getGradeToSign() const { return gradeToSign; }
