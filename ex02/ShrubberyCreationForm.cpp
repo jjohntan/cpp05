@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:16:34 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/03 16:48:00 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/03 18:46:57 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,22 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		throw ;
 	if (getGradeToExecute() > getGradeToExecute())
 		throw GradeTooLowException();
-	std::ifstream;//read the file
-
-	std::string filename = getTarget() + "_shrubbery";//file name
+	std::string filename = target + "_shrubbery";//file name
 	std::ofstream ofs(filename);//create and open a file
-
-	ofs << ;
+	if (!ofs)
+	{
+		std::cerr << "Error create file" << std::endl;
+	}
+	std::string ASCIItrees = 
+	"      /\      \n"
+	"     /\*\     \n"
+	"    /\O\*\    \n"
+	"   /*/\/\/\   \n"
+	"  /\O\/\*\/\  \n"
+	" /\*\/\*\/\/\ \n"
+	"/\O\/\/*/\/O/\\n"
+	"      ||      \n"
+	"      ||      \n"
+	"      ||      \n";
+	ofs << ASCIItrees;
 }
