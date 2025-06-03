@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 19:03:32 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/31 16:55:48 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/03 16:38:56 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PresidentialPardonForm: public AForm
 		PresidentialPardonForm(const PresidentialPardonForm &other);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
 		~PresidentialPardonForm();
-		void execute(Bureaucrat const & executor);
+		void execute(Bureaucrat const & executor) const;
 
 };
 
