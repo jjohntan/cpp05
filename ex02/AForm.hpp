@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:47 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/03 16:31:01 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/04 20:04:09 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include <string>
 #include <iostream>
-#include "Bureaucrat.hpp"
 #include <fstream>
+#include <cstdlib>
+#include "Bureaucrat.hpp"
 
 class Bureaucrat;
 

@@ -6,23 +6,23 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:16:34 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/03 18:46:57 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/04 19:38:04 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(): target("")
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm("ShrubberyCreationForm", 145, 137), target("")
 {
 	std::cout << "ShrubberyCreationForm default constructor" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string _target): target(_target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string _target): AForm("ShrubberyCreationForm", 145, 137), target(_target)
 {
 	std::cout << "ShrubberyCreationForm parameter constructor" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other): AForm(other)
 {
 	std::cout << "ShrubberyCreationForm copy constructor" << std::endl;
 	
@@ -42,7 +42,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << "Destructor" << std::endl;
+	std::cout << "ShrubberyCreationForm destructor" << std::endl;
 }
 
 //getter
@@ -61,15 +61,22 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		std::cerr << "Error create file" << std::endl;
 	}
 	std::string ASCIItrees = 
-	"      /\      \n"
-	"     /\*\     \n"
-	"    /\O\*\    \n"
-	"   /*/\/\/\   \n"
-	"  /\O\/\*\/\  \n"
-	" /\*\/\*\/\/\ \n"
-	"/\O\/\/*/\/O/\\n"
-	"      ||      \n"
-	"      ||      \n"
-	"      ||      \n";
+	"               -@               \n"
+	"              .##@              \n"
+	"             .####@             \n"
+	"             @#####@            \n"
+	"           . *######@           \n"
+	"          .##@o@#####@          \n"
+	"         /############@         \n"
+	"        /##############@        \n"
+	"       @######@**%######@       \n"
+	"      @######`     %#####o      \n"
+	"     @######@       ######%     \n"
+	"   -@#######h       ######@.`   \n"
+	"  /#####h**``       `**%@####@  \n"
+	" @H@*`                    `*%#@ \n"
+	"*`                            `*\n";
+
 	ofs << ASCIItrees;
+	ofs.close();
 }
