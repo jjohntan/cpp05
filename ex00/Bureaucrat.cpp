@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:21 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/21 16:39:35 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/23 14:30:09 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,10 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
-std::string Bureaucrat::getName() const { return this->name; }//get name
+//getter
+std::string Bureaucrat::getName() const { return this->name; }
 
-int Bureaucrat::getGrade() const { return this->grade; }//get grade
+int Bureaucrat::getGrade() const { return this->grade; }
 
 void Bureaucrat::incrementGrade()
 {

@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:21 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/23 16:10:53 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/30 15:36:35 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,11 @@ void Bureaucrat::signForm(Form &form)
 	try
 	{
 		form.beSigned(*this);
+		std::cout << name << " signed " << form.getName() << std::endl;
 	}
 	catch (std::exception & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << name << " couldn’t sign " << form.getName() << " because " << e.what() << "."<< std::endl;
 	}
 }
 
