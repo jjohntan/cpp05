@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:16:34 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/04 19:38:04 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/05 14:32:16 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,13 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if (!getIsSigned())
 		throw ;
-	if (getGradeToExecute() > getGradeToExecute())
+	if (executor.getGrade() > getGradeToExecute())
 		throw GradeTooLowException();
 	std::string filename = target + "_shrubbery";//file name
-	std::ofstream ofs(filename);//create and open a file
+	std::ofstream ofs(filename.c_str());//create and open a file
 	if (!ofs)
-	{
-		std::cerr << "Error create file" << std::endl;
-	}
+		std::cerr << "Error\n create file!" << std::endl;
+		
 	std::string ASCIItrees = 
 	"               -@               \n"
 	"              .##@              \n"
@@ -76,7 +75,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	"  /#####h**``       `**%@####@  \n"
 	" @H@*`                    `*%#@ \n"
 	"*`                            `*\n";
-
-	ofs << ASCIItrees;
-	ofs.close();
+	ofs << ASCIItrees;//write to the file
+	ofs.close();//close the file
 }

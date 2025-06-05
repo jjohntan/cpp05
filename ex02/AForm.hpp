@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:47 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/04 20:04:09 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/05 14:48:07 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <string>
 #include <iostream>
-#include <fstream>
 #include <cstdlib>
 #include "Bureaucrat.hpp"
 
@@ -47,6 +46,11 @@ class AForm
 				const char *what() const throw();
 		};
 		class GradeTooLowException: public std::exception
+		{
+			public:
+				const char *what() const throw();
+		};
+		class FormNotSignedException: public std::exception
 		{
 			public:
 				const char *what() const throw();

@@ -6,12 +6,14 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 16:39:52 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/03 16:40:23 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/05 14:34:13 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef  SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
+
+#include <fstream>
 
 #include "AForm.hpp"
 

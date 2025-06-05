@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/03 16:39:42 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/05 14:49:57 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
+}
+
+const char *AForm::FormNotSignedException::what() const throw()
+{
+	return "Form not signed";
 }
 
 std::ostream &operator<<(std::ostream &os, const AForm &obj)
