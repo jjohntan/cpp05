@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 17:02:09 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 14:38:10 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/05 16:11:50 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,10 @@ std::string RobotomyRequestForm::getTarget() const { return target; }
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
 	if (!getIsSigned())
-		throw ;
+		throw FormNotSignedException();
 	if (executor.getGrade() > getGradeToExecute())
 		throw GradeTooLowException();
+	srand(time(0));//with a changing value, such as the current time
 	int randomNumber = rand() % 2;//generates a random integer that is either 0 or 1
 	if (randomNumber == 0)
 	{

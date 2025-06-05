@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:16:34 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 14:32:16 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/05 14:51:59 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ std::string ShrubberyCreationForm::getTarget() const { return target; }
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if (!getIsSigned())
-		throw ;
+		throw FormNotSignedException();
 	if (executor.getGrade() > getGradeToExecute())
 		throw GradeTooLowException();
 	std::string filename = target + "_shrubbery";//file name
