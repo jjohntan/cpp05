@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:16:34 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 14:51:59 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/09 18:13:25 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	std::string filename = target + "_shrubbery";//file name
 	std::ofstream ofs(filename.c_str());//create and open a file
 	if (!ofs)
-		std::cerr << "Error\n create file!" << std::endl;
+		std::cout << "Error\n create file!" << std::endl;
 		
 	std::string ASCIItrees = 
 	"               -@               \n"

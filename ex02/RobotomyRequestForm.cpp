@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 17:02:09 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 16:11:50 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/09 18:13:03 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-		std::cout << "RobotomyRequestForm destructor" << std::endl;
+	std::cout << "RobotomyRequestForm destructor" << std::endl;
 }
 
 //getter
