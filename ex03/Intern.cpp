@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:03:12 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/09 18:07:04 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/10 16:34:38 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Intern::~Intern()
 	std::cout << "Intern destructor" << std::endl;
 }
 
+//instructions
 AForm *createPresidentialPardonForm(const std::string &target)
 {
 	return new PresidentialPardonForm(target);
@@ -52,10 +53,11 @@ AForm *createShrubberyCreationForm(const std::string &target)
 	return new ShrubberyCreationForm(target);
 }
 
+//Function pointer
 AForm *Intern::makeForm(const std::string &name, const std::string &target)
 {
-	AForm *(*creators[])(const std::string &) = {createShrubberyCreationForm,
-	 createRobotomyRequestForm, createPresidentialPardonForm};
+	AForm *(*fun_ptr[])(const std::string &target) = {createShrubberyCreationForm,
+	 createRobotomyRequestForm, createPresidentialPardonForm};//hold address of instructions
 	
 	std::string ptr_lst[] = {"shrubbery creation",
 	 "robotomy request", "presidential pardon"};
@@ -65,7 +67,7 @@ AForm *Intern::makeForm(const std::string &name, const std::string &target)
 		if (name == ptr_lst[i])
 		{
 			std::cout << "Intern creates " << name << std::endl;
-			return creators[i](target);
+			return fun_ptr[i](target);
 		}
 	}
 	std::cout << "Form name passed as parameter doesn’t exist!" << std::endl;
