@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:03:12 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/10 16:34:38 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/12 15:13:50 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Intern::Intern()
 {
-	std::cout << "Intern default constructor" << std::endl;
+	std::cout << "Intern default constructor called" << std::endl;
 }
 
 Intern::Intern(const Intern &other)
 {
-	std::cout << "Intern copy constructor" << std::endl;
+	std::cout << "Intern copy constructor called" << std::endl;
 	
 	(void)other;//class has no data
 }
 
 Intern &Intern::operator=(const Intern &other)
 {
-	std::cout << "Intern copy assignment operator" << std::endl;
+	std::cout << "Intern copy assignment operator called" << std::endl;
 	
 	(void)other;//class has no data
 	return *this;
@@ -34,7 +34,7 @@ Intern &Intern::operator=(const Intern &other)
 
 Intern::~Intern()
 {
-	std::cout << "Intern destructor" << std::endl;
+	std::cout << "Intern destructor called" << std::endl;
 }
 
 //instructions

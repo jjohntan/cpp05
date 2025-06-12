@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 16:28:15 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 16:34:28 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/12 15:14:05 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", 25, 5), target("")
 {
-	std::cout << "PresidentialPardonForm default constructor" << std::endl;
+	std::cout << "PresidentialPardonForm default constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string _target): AForm("PresidentialPardonForm", 25, 5), target(_target)
 {
-	std::cout << "PresidentialPardonForm parameter constructor" << std::endl;
+	std::cout << "PresidentialPardonForm parameter constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other): AForm(other)
 {
-	std::cout << "PresidentialPardonForm copy constructor" << std::endl;
+	std::cout << "PresidentialPardonForm copy constructor called" << std::endl;
 	
 	*this = other;
 }
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &other)
 {
-	std::cout << "PresidentialPardonForm copy assignment operator" << std::endl;
+	std::cout << "PresidentialPardonForm copy assignment operator called" << std::endl;
 	
 	if (this != &other)
 	{
@@ -42,7 +42,7 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-		std::cout << "PresidentialPardonForm destructor" << std::endl;
+		std::cout << "PresidentialPardonForm destructor called" << std::endl;
 }
 
 //getter

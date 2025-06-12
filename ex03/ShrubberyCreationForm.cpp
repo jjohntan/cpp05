@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 17:16:34 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 14:51:59 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/12 15:14:35 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm(): AForm("ShrubberyCreationForm", 145, 137), target("")
 {
-	std::cout << "ShrubberyCreationForm default constructor" << std::endl;
+	std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string _target): AForm("ShrubberyCreationForm", 145, 137), target(_target)
 {
-	std::cout << "ShrubberyCreationForm parameter constructor" << std::endl;
+	std::cout << "ShrubberyCreationForm parameter constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other): AForm(other)
 {
-	std::cout << "ShrubberyCreationForm copy constructor" << std::endl;
+	std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
 	
 	*this = other;
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
 {
-	std::cout << "ShrubberyCreationForm copy assignment operator" << std::endl;
+	std::cout << "ShrubberyCreationForm copy assignment operator called" << std::endl;
 	
 	if (this != &other)
 	{
@@ -42,7 +42,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << "ShrubberyCreationForm destructor" << std::endl;
+	std::cout << "ShrubberyCreationForm destructor called" << std::endl;
 }
 
 //getter
