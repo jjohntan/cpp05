@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 17:02:09 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/09 18:13:03 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/12 15:12:59 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45), target("")
 {
-	std::cout << "RobotomyRequestForm default constructor" << std::endl;
+	std::cout << "RobotomyRequestForm default constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string _target): AForm("RobotomyRequestForm", 72, 45), target(_target)
@@ -24,14 +24,14 @@ RobotomyRequestForm::RobotomyRequestForm(std::string _target): AForm("RobotomyRe
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other): AForm(other)
 {
-	std::cout << "RobotomyRequestForm copy constructor" << std::endl;
+	std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
 	
 	*this = other;
 }
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &other)
 {
-	std::cout << "RobotomyRequestForm copy assignment operator" << std::endl;
+	std::cout << "RobotomyRequestForm copy assignment operator called" << std::endl;
 	
 	if (this != &other)
 	{
@@ -42,7 +42,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << "RobotomyRequestForm destructor" << std::endl;
+	std::cout << "RobotomyRequestForm destructor called" << std::endl;
 }
 
 //getter
