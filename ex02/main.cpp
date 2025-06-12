@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 16:22:59 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/10 20:54:13 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/11 14:45:13 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,58 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+
+void testSignForm_invalid()
+{
+	std::cout << "\n-------------invalid-------------" << std::endl;
+	try
+	{
+		Bureaucrat a("Bob", 150);
+		RobotomyRequestForm forma("house");
+		// a.signForm(forma);
+		a.executeForm(forma);
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat b("Jim", 151);
+		RobotomyRequestForm formb("house");
+		b.signForm(formb);
+		formb.execute(b);
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat c("Foo", 146);
+		ShrubberyCreationForm formc("house");
+		c.signForm(formc);
+		formc.execute(c);
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat d("Foo", 138);
+		ShrubberyCreationForm formd("house");
+		d.signForm(formd);
+		formd.execute(d);
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
 
 void testSignForm()
 {
@@ -29,41 +81,30 @@ void testSignForm()
 	{
 		std::cout << e.what() << std::endl;
 	}
-	// try
-	// {
-	// 	Bureaucrat b("", 44);
-	// 	RobotomyRequestForm formb("");
-	// 	b.signForm();
-	// 	formb.execute();
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cout << e.what() << std::endl;
-	// }
-	// try
-	// {
-	// 	Bureaucrat c("", 4);
-	// 	PresidentialPardonForm formc("");
-	// 	c.signForm();
-	// 	formc.execute();
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cout << e.what() << std::endl;
-	// }
-
-	// std::cout << "\n-------------invalid-------------" << std::endl;
-	// try
-	// {
-	// 	Bureaucrat jim("Jim", 150);
-	// 	RobotomyRequestForm formb("house");
-	// 	// jim.signForm(formb);
-	// 	formb.execute(jim);
-	// }
-	// catch (std::exception & e)
-	// {
-	// 	std::cout << e.what() << std::endl;
-	// }
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat b("Jim", 44);
+		RobotomyRequestForm formb("school");
+		b.signForm(formb);
+		b.executeForm(formb);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat c("Foo", 4);
+		PresidentialPardonForm formc("office");
+		c.signForm(formc);
+		c.executeForm(formc);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 }
 
 void OrthodoxCanonicalForm()
@@ -81,6 +122,7 @@ void OrthodoxCanonicalForm()
 
 int main()
 {
-	// OrthodoxCanonicalForm();
+	OrthodoxCanonicalForm();
 	testSignForm();
+	testSignForm_invalid();
 }

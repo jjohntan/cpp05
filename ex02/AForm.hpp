@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:47 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 14:48:07 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/11 14:15:08 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class AForm
 		AForm(std::string _name, int _gradeTosign, int _gradeToExecute);
 		AForm(const AForm &other);
 		AForm &operator=(const AForm &other);
-		~AForm();
+		virtual ~AForm();
 		std::string getName() const;
 		bool getIsSigned() const;
 		int getGradeToSign() const;
