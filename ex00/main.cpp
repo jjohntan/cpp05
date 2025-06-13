@@ -6,11 +6,114 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:23 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/04 20:50:57 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/13 16:41:48 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+void decrement_grade()
+{
+	std::cout << "\n-------------decrement grade-----------" << std::endl;
+	try
+	{
+		Bureaucrat a("Jim", 148);
+		for (int i = 0; i < 2; i++)
+		{
+			a.decrementGrade();
+			std::cout << a << std::endl;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat b("Jim", 148);
+		for (int i = 0; i < 3; i++)
+		{
+			b.decrementGrade();
+			std::cout << b << std::endl;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
+void increment_grade()
+{
+	std::cout << "\n-------------increment grade-----------" << std::endl;
+	try
+	{
+		Bureaucrat a("Bob", 3);
+		for (int i = 0; i < 2; i++)
+		{
+			a.incrementGrade();
+			std::cout << a << std::endl;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat b("Bob", 3);
+		for (int i = 0; i < 3; i++)
+		{
+			b.incrementGrade();
+			std::cout << b << std::endl;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+}
+
+void invalid_grade()
+{
+	std::cout << "\n-------------invalid grade-------------" << std::endl;
+	try
+	{
+		Bureaucrat invalid("Jim", 151);
+		std::cout << invalid << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat invalid2("Jim", 0);
+		std::cout << invalid2 << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
+void valid_grade()
+{
+	std::cout << "-------------valid grade---------------" << std::endl;
+	try
+	{
+		Bureaucrat valid("Bob", 2);
+		std::cout << valid << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
 
 void	OrthodoxCanonicalForm()
 {
@@ -25,55 +128,12 @@ void	OrthodoxCanonicalForm()
 	std::cout << cao << std::endl;
 }
 
+
 int main()
 {
-	// OrthodoxCanonicalForm();
-	std::cout << "-------------valid grade---------------" << std::endl;
-	try
-	{
-		Bureaucrat valid("Bob", 2);
-		std::cout << valid << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	std::cout << "\n-------------invalid grade-------------" << std::endl;
-	try
-	{
-		Bureaucrat invalid("Jim", 151);
-		std::cout << invalid << std::endl;
-	}
-	catch (std::exception & e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	std::cout << "\n-------------increment grade-----------" << std::endl;
-	try
-	{
-		Bureaucrat a("Bob", 2);
-		for (int i = 0; i < 2; i++)
-		{
-			std::cout << a << std::endl;
-			a.incrementGrade();
-		}
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	std::cout << "\n-------------decrement grade-----------" << std::endl;
-	try
-	{
-		Bureaucrat b("Jim", 149);
-		for (int i = 0; i < 2; i++)
-		{
-			std::cout << b << std::endl;
-			b.decrementGrade();
-		}
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	OrthodoxCanonicalForm();
+	valid_grade();
+	invalid_grade();
+	increment_grade();
+	decrement_grade();
 }

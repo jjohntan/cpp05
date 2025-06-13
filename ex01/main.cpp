@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:23 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/30 15:38:35 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/13 16:42:34 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,26 +46,32 @@ void decrement_grade()
 	std::cout << "\n-------------decrement grade-----------" << std::endl;
 	try
 	{
-		Bureaucrat b("Jim", 149);
+		Bureaucrat a("Jim", 148);
 		for (int i = 0; i < 2; i++)
 		{
-			std::cout << b << std::endl;
-			b.decrementGrade();
+			a.decrementGrade();
+			std::cout << a << std::endl;
 		}
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	Form valid("Bob", 1, 2);
+	std::cout << "----------------------------------------------------" << std::endl;
 	try
 	{
-		Form valid("Bob", 1, 0);
+		Bureaucrat b("Jim", 148);
+		for (int i = 0; i < 3; i++)
+		{
+			b.decrementGrade();
+			std::cout << b << std::endl;
+		}
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
+
 }
 
 void increment_grade()
@@ -73,17 +79,32 @@ void increment_grade()
 	std::cout << "\n-------------increment grade-----------" << std::endl;
 	try
 	{
-		Bureaucrat a("Bob", 2);
+		Bureaucrat a("Bob", 3);
 		for (int i = 0; i < 2; i++)
 		{
-			std::cout << a << std::endl;
 			a.incrementGrade();
+			std::cout << a << std::endl;
 		}
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat b("Bob", 3);
+		for (int i = 0; i < 3; i++)
+		{
+			b.incrementGrade();
+			std::cout << b << std::endl;
+		}
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
 }
 
 void invalid_grade()
@@ -93,6 +114,16 @@ void invalid_grade()
 	{
 		Bureaucrat invalid("Jim", 151);
 		std::cout << invalid << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "----------------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat invalid2("Jim", 0);
+		std::cout << invalid2 << std::endl;
 	}
 	catch (std::exception & e)
 	{

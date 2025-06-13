@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 10:57:21 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/10 20:57:08 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/13 17:46:38 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void Bureaucrat::executeForm(AForm const & form)
 	try
 	{
 		form.execute(*this);
-		std::cout << name << " executed " << form << std::endl;
+		std::cout << name << " executed " << form.getName() << std::endl;
 	}
 	catch (std::exception & e)
 	{

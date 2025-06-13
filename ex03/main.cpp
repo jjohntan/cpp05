@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 16:22:59 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/12 15:08:47 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/13 17:48:46 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,8 +143,8 @@ void OrthodoxCanonicalForm()
 
 int main()
 {
-	// OrthodoxCanonicalForm();
-	// testSignForm();
-	// testSignForm_invalid();
+	OrthodoxCanonicalForm();
+	testSignForm();
+	testSignForm_invalid();
 	testIntern();
 }

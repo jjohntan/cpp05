@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/05 14:49:57 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/13 17:00:51 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,13 @@ bool AForm::getIsSigned() const { return isSigned; }
 int AForm::getGradeToSign() const { return gradeToSign; }
 int AForm::getGradeToExecute() const { return gradeToExecute; }
 
+//Remember, grade 1 is higher than grade 2.
 void AForm::beSigned(Bureaucrat const &bureaucrat)
 {
-	if (bureaucrat.getGrade() <= gradeToSign)
-		isSigned = true;
+	if (bureaucrat.getGrade() <= gradeToSign)//if the bureaucrat’s grade is high enough
+		isSigned = true;//changes the form status to signed
 	else
-		throw GradeTooLowException();
+		throw GradeTooLowException();//If the grade is too low
 }
 
 const char *AForm::GradeTooHighException::what() const throw()
