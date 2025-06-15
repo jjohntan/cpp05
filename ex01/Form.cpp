@@ -6,13 +6,13 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:58:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/13 17:01:02 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/15 17:50:45 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): name("Default name"), isSigned(false), gradeToSign(), gradeToExecute()
+Form::Form(): name("Default name"), isSigned(false), gradeToSign(144), gradeToExecute(136)
 {
 	std::cout << "Form default constructor called" << std::endl;
 }
