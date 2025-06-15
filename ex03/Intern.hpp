@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:02:58 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/09 17:25:20 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/15 17:31:31 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@
 
 class Intern
 {
-	// private:
-	// 	AForm *createShrubberyCreationForm(const std::string &target);
-	// 	AForm *createRobotomyRequestForm(const std::string &target);
-	// 	AForm *createPresidentialPardonForm(const std::string &target);
 	public:
 		Intern();
 		Intern(const Intern &other);
