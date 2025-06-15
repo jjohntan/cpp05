@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 16:28:15 by jetan             #+#    #+#             */
-/*   Updated: 2025/06/12 15:14:05 by jetan            ###   ########.fr       */
+/*   Updated: 2025/06/15 17:03:54 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-		std::cout << "PresidentialPardonForm destructor called" << std::endl;
+	std::cout << "PresidentialPardonForm destructor called" << std::endl;
 }
 
 //getter
